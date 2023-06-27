@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button class="custom-button" slot="start" [routerLink]="['/home']">
+      <ion-label class="boton-home">Tele Trabajos</ion-label>
+    </ion-button>
+
+    <ion-button class="custom-button" slot="end" [routerLink]="['/home']">
+      <ion-icon class="config" name="cog"></ion-icon>
+    </ion-button>
+    
+    <ion-button class="custom-button" slot="end" [routerLink]="['/ruta']">
+      <ion-icon slot="icon-only" class="boton-ayuda" name="help-circle-outline"></ion-icon>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar>
+<ion-card>
+  Como ellos tu tambien puedes encontrar tu trabajo aqui!
+</ion-card>
+</ion-toolbar>
+<ion-content>
+  <ion-card *ngIf="randomUser">
+    <ion-card-header>
+      <ion-card-title>
+        {{ randomUser.name.first }} {{ randomUser.name.last }}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-img [src]="randomUser.picture.large" class="user-image"></ion-img>
+      <p>Email: {{ randomUser.email }}</p>
+      <p>Nombre de usuario: {{ randomUser.login.username }}</p>
+      <p>Residencia: {{ randomUser.location.city }}, {{ randomUser.location.country }}</p>
+      <ion-button class="botonI" color="warning" expand="block" (click)="loadRandomUser()">Siguiente</ion-button>
+    </ion-card-content>
