@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+
+      <ion-button class="custom-button" slot="start" [routerLink]="['/home']">
+        <ion-label class="boton-home">Tele Trabajos</ion-label>
+      </ion-button>
+
+    <ion-button class="custom-button" slot="end" [routerLink]="['/home']">
+      <ion-icon class="config" name="cog"></ion-icon>
+    </ion-button>
+    
+    <ion-button class="custom-button" slot="end" [routerLink]="['/ruta']">
+      <ion-icon slot="icon-only" class="boton-ayuda" name="help-circle-outline"></ion-icon>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+<ion-title class="title-reg">Iniciar sesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+      <ion-label color=warning position="floating"> Correo electronico</ion-label>
+      <ion-input type="email"[(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color=warning position="floating">Contraseña</ion-label>
+      <ion-input type="password"[(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-button color=warning expand="full" (click)="login()">Iniciar sesion</ion-button>
+    <ion-label color=warning position="floating">¿No tienes una cuenta?</ion-label> <a class="pregunta" [routerLink]="['/registro']">Registrate aqui</a>
+    
+</ion-content>

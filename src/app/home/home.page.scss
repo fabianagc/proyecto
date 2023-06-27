@@ -17,11 +17,23 @@
   font-size: 16px;
   line-height: 22px;
 
-  color: #8c8c8c;
+  color: #a100c9;
 
   margin: 0;
 }
 
 #container a {
   text-decoration: none;
+}
+
+.custom-title{
+  color:rgb(164, 5, 238); 
+}
+.titulo{
+  color:rgb(164, 5, 238); 
+}
+.custom-card{
+  color:rgb(164, 5, 238); 
+  background-color: transparent;
+  font-weight: bold;
 }
